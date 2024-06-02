@@ -1,7 +1,8 @@
 // // Import the required modules
 import express from 'express';
-import {createReview, getReview, getReviews, updateReview, deleteReview} from './reviewController.js';
-import {createContact, getContact, getContacts, updateContact, deleteContact} from'./contactController.js';
+import mongoose from 'mongoose';
+import {createReview, getReview, getReviews, updateReview, deleteReview} from './reviewController';
+import {createContact, getContact, getContacts, updateContact, deleteContact} from'./contactController';
 // import contactSeedData from '../models/contact_seed.js';
 // import Contact from '../models/contact.js'
 

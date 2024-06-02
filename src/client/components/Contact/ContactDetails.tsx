@@ -1,7 +1,20 @@
 import React from "react";
 import "./Contact.css";
 
-const ContactDetails = ({ contact }) => {
+interface Contact {
+    _id: string;
+    name: string;
+    email: string;
+    portrait: string;
+    resume: string;
+    socials: string;
+}
+
+interface ContactDetailsProps{
+    contact: Contact;
+}
+
+const ContactDetails: React.FC<ContactDetailsProps> = ({ contact }) => {
     return (
         <div className="contact-details">
             <h4>{contact.name}</h4>

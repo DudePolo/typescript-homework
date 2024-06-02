@@ -1,7 +1,15 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
-const contactSchema = new Schema({
+interface Contact extends Document {
+    name: string;
+    portrait: string;
+    socials: string;
+    resume: string;
+    email: string;
+}
+
+const contactSchema = new Schema <Contact> ({
     name: { type: String, default: 'Anonymous' },
     portrait: { type: String, },
     socials: { type: String, },

@@ -1,7 +1,15 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
-const reviewSchema = new Schema({
+interface Review extends Document {
+    firstName: string;
+    lastName: string;
+    email: string;
+    comments: string;
+    starRating: number;
+}
+
+const reviewSchema = new Schema <Review> ({
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
     email: { type: String, required: true },
